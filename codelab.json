@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-23T23:52:10+01:00",
+  "id": "BIOS01",
+  "duration": 9,
+  "title": "Guia BIOS 01 Portátil MSI CX61-2PC",
+  "summary": "Guia Opciones Seguridad BIOS1",
+  "source": "guia_bios1.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "BIOS01"
+}

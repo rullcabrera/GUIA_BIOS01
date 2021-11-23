@@ -1,0 +1,115 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Guia BIOS 01 Portátil MSI CX61-2PC</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="BIOS01"
+                  title="Guia BIOS 01 Portátil MSI CX61-2PC"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Página 1" duration="1">
+        <h2 is-upgraded>Introducción</h2>
+<p>Consultaremos las opciones de seguridad que nos ofrece nuestra BIOS.<br>En mi caso aunque es algo antigua se trata de una BIOS UEFI y no Legacy.<br>En el apartado <strong>&#34;Security&#34;</strong>, tenemos las siguiente opciones.</p>
+<p class="image-container"><img alt="Foto1_BIOS01" src="img/48331fb8083eab9f.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Página 2" duration="2">
+        <h2 is-upgraded>SECCIÓN CLAVES EN LA BIOS</h2>
+<ul>
+<li><strong>Supervisor Password</strong> → Nos permite asignar una clave a la ahora de acceder a la BIOS.</li>
+<li><strong>User Password</strong> → En este caso asignamos una clave, que nos pedirá justo cuando arranquemos el equipo, para seguir iniciando el sistema.<br><img alt="Foto1_BIOS01" src="img/49dbeac1717f993f.jpg"></li>
+<li><strong>Password check</strong> → Es una opción en la cual podemos indicar cuando queremos que se revise la clave o al arranque o siempre. La diferencia que he podido comprobar es:<ul>
+<li><strong>Setup</strong>: Te pedirá la clave al entrar a la BIOS.</li>
+<li><strong>Always</strong>: Te la pedirá al arrancar o al entrar en la BIOS. Sin necesidad de poner una específica a la ahora de arrancar.<br><img alt="Foto2_BIOS01" src="img/6285b9a51aa972b.jpg"></li>
+</ul>
+</li>
+</ul>
+<aside class="special"><p>Asignamos clave Supervisor</p>
+</aside>
+<p><img alt="Foto3_BIOS01" src="img/4f7c3b4abecca09b.jpg"><br>Nos pedirá confirmación de la clave que hemos puesto.<br><img alt="Foto4_BIOS01" src="img/e0d13c6ec0f77c7e.jpg"></p>
+<aside class="special"><p>Vemos que ahora arriba nos sale <strong>&#34;Supervisor Password: Installed&#34;</strong></p>
+</aside>
+<p><img alt="Foto6_BIOS01" src="img/cc55220c596ecb6.jpg"><br>Guardamos cambios y reiniciamos.<br><img alt="Foto5_BIOS01" src="img/4d7b3df2e8245dc4.jpg"><br>Y ya al reiniciar nuestro equipo. Y para ejecutar la BIOS, nos pedirá la clave que acabamos  de asignar.<br><img alt="Foto14_BIOS01" src="img/826705772fdce370.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Página 3" duration="2">
+        <p>Ahora, haremos lo mismo pero con User Password.<br><img alt="Foto7_BIOS01" src="img/81fe2784b9ba86dc.jpg"><br>Nos volverá a pedir que confirmemos la clave que queremos.<br><img alt="Foto8_BIOS01" src="img/3059de8bd91cbd36.jpg"></p>
+<aside class="special"><p>Y ahora es <strong>&#34;User Password: installed&#34;</strong>.</p>
+</aside>
+<p><img alt="Foto9_BIOS01" src="img/8fee31f3e943c483.jpg"><br>Guardaremos cambios, y al reiniciar está vez nos pedirán una clave justo al arrancar el equipo.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Página 4" duration="3">
+        <h2 is-upgraded>SECCIÓN SECURE BOOT</h2>
+<ul>
+<li><strong>Secure Boot</strong>: Es el arranque seguro que metió <em>Microsoft</em>, para de alguna manera impedir que se ejecute posible <em>&#34;código malicioso&#34;</em> y asegurar que lo que se ejecuta es de <em>&#34;autores conocidos&#34;</em>. Esto acarreó problemas a la hora de instalar Windows con otros sistemas.</li>
+</ul>
+<p>A día de hoy ya es más &#34;amigable&#34;, con otros sistemas.<br>Por ejemplo Ubuntu de Linux.</p>
+<ul>
+<li>Tenemos la opción:<br><br><ul>
+<li><strong>Secure Boot Control</strong>: Habilitado/Deshabilitado.<br><img alt="Foto10_BIOS01" src="img/2e99e0428b7e7c7a.jpg"></li>
+<li><strong>Secure Boot Mode</strong>: Standar/Custom<br><img alt="Foto12_BIOS01" src="img/9532dac2105cde24.jpg"></li>
+</ul>
+</li>
+</ul>
+<aside class="special"><p>El modo <strong>&#34;Custom&#34;</strong>, lo que te permite, es gestionar las claves del arranque seguro.</p>
+</aside>
+<p>Luego a su vez tiene 2 opciones más:</p>
+<ul>
+<li><strong>Factory Default Key Provisioning</strong>: Enabled/Disabled. Habilitaremos o no. Las claves, que permiten el proceso de autenticar previamente los módulos que se vayan a poder ejecutarse (<em>firmware drivers, UEFI bootloaders, UEFI applications</em>).</li>
+<li><strong>Install All Factory Default Keys</strong>: Para instalar las claves por defecto.<br><img alt="Foto13_BIOS01" src="img/d7ef3280b424ec78.jpg"></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Página 5" duration="1">
+        <h2 is-upgraded>SECCIÓN BOOT</h2>
+<ul>
+<li><strong>Boot Order</strong> (Orden de arranque):<br><br><ul>
+<li>Aquí podremos personalizar el orden en el que queremos que se arranque nuestro equipo. Tenemos a modo de compatibilidades dos tipos de modos de selección en el orden de arranque:</li>
+<li><strong>UEFI o Legacy</strong>: En mi caso tengo puesto el modo <em>&#34;UEFI&#34;</em>. Y el orden se muestra en la imagen.<br><img alt="Foto11_BIOS01" src="img/e952d2e15dcb4230.jpg"></li>
+</ul>
+</li>
+</ul>
+<aside class="warning"><p>Y en el caso de está BIOS al no tener muchas opciones respecto a evitar arranques desde fuera. Podríamos o deshabilitar <em>Wake On LAN</em> y eliminar las entradas innecesarias de dispositivos que no queremos que arranque. Así evitaríamos que se pudiera arrancar el equipo si estuviera conectado en Red. O en el caso de que el equipo se encuentre en alguno de los supuestos que no permitiera arrancar desde esos dispositivos, Eliminado del <em>&#34;Boot Order&#34;</em> la entrada.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
